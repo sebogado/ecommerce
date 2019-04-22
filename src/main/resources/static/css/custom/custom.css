@@ -1,0 +1,40 @@
+.no-outline {
+    outline: none !important;
+}
+
+.cke_button__btnagregartitulo_label, .cke_button__btnagregarmensaje_label {
+    display: inline !important;
+}
+
+.cke_button__btnagregartitulo_icon, .cke_button__btnagregarmensaje_icon {
+    display: none !important;
+}
+
+.bg-gray {
+    background: #eee;
+}
+
+.main-navigation {
+
+}
+
+.view-template {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.btn-logout {
+    padding: 20px 10px !important;
+    color: #999c9e;
+    font-weight: 600;
+}
+
+.padding-dl > dt, .padding-dl > dd {
+    padding: 5px 0;
+}
+
+.view-group-usuarios > .list-group-item {
+    padding: 6px 15px 0px !important;
+}

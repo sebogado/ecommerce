@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layouts/main}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Store</title>
+</head>
+<body>
+
+<div class="container animated fadeInDown" id="page-content" layout:fragment="page-content">
+
+    <a th:href="@{/app/admin/user}">
+        <div class="col-lg-6">
+            <div class="widget red-bg p-lg text-center">
+                <div class="m-b-md">
+                    <i class="fa fa-bell fa-4x"></i>
+                    <h1 class="m-xs" th:text="${cantArticulo}">47</h1>
+                    <h3 class="font-bold no-margins" th:text="#{producto.home.gestArticulo}">
+                        Notification
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a th:href="@{/app/admin/perfil}">
+        <div class="col-lg-6">
+            <div class="widget navy-bg p-lg text-center">
+                <div class="m-b-md">
+                    <i class="fa fa-bell fa-4x"></i>
+                    <h1 class="m-xs" th:text="${cantTalles}">47</h1>
+                    <h3 class="font-bold no-margins" th:text="#{producto.home.gestTalle}">
+                        Gestionar talles
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </a>
+
+</div>
+<!-- End of wrapper thymeleaf-->
+<th:block layout:fragment="extra-js">
+</th:block>
+</body>
+</html>

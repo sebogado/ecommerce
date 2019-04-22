@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="es" layout:decorate="~{layouts/master}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pagina de administracion</title>
+</head>
+
+<body>
+
+<div id="wrapper" layout:fragment="wrapper">
+
+    <nav class="navbar-default navbar-static-side main-navigation" role="navigation">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <strong class="font-bold"></strong>
+                            </span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li>
+                            <a href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+            </li>
+            <!--<li data-pathname="/myProfile"><a href="/myProfile"><i class="fa fa-th-large"></i><span class="nav-label"  th:text="#{main.miPerfil}"></span></a></li>-->
+            <li data-pathname="/admin/roles">
+                <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label" th:text="#{main.administrar}"></span>
+                    <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li data-pathname="/admin/users"><a href="/app/admin/user"
+                                                        th:text="#{main.AdministrarUsuarios}"></a></li>
+                    <li data-pathname="/admin/perfiles"><a href="/app/admin/perfil"
+                                                           th:text="#{main.AdministrarPerfiles}"></a></li>
+                </ul>
+            </li>
+            <li data-pathname="/admin/articulos">
+                <a href="/app/admin/articulo"><i class="fa fa-th-large"></i><span class="nav-label"
+                                                                                  th:text="#{main.administrarArticulos}"></span><span
+                        class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li data-pathname="/admin/articulo"><a href="/app/admin/articulo"
+                                                           th:text="#{main.gestionarArticulos}"></a></li>
+                    <li data-pathname="/admin/talle"><a href="/app/admin/talle" th:text="#{main.gestionarTalle}"></a>
+                    </li>
+                    <li data-pathname="/admin/insert_massive"><a href="/app/admin/articulo/massive_insert"
+                                                                 th:text="#{main.ingresoMasivoArt}"></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="gray-bg" id="page-wrapper">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <form method="post" th:action="@{/logout}">
+                            <button class="btn btn-link btn-flat btn-logout" type="submit">
+                                <i class="fa fa-sign-out"></i> Log out
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="wrapper wrapper-content">
+            <div class="row" layout:fragment="page-content">
+            </div>
+        </div>
+        <div class="footer fixed">
+            <div class="pull-right">
+                Prohibida la reventa de licencia
+            </div>
+            <div>
+                <strong>Copyright</strong> NSU Consulting &copy; 2016-2017
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>
